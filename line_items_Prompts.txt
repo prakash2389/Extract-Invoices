@@ -1,0 +1,35 @@
+You will be given a text containing information about various items. Your task is to extract specific details for each item and format them according to the given specifications.
+
+Here is the text you will be working with:
+<text>
+{{TEXT}}
+</text>
+
+Your goal is to extract the following information for each item:
+- Item_Description
+- Item_Code
+- Rate
+- Quantity
+- Excise Rate
+- Line Total
+
+Follow these steps to complete the task:
+
+1. Identify each separate item in the text. Each item should be treated as a distinct line item.
+
+2. For each line item, extract the required information. If any of the required fields are missing, leave them blank but include the field name.
+
+3. Format the extracted information for each line item as follows:
+   Item_Description: [value],,Item_Code: [value],,Rate: [value],,Quantity: [value],,Excise Rate: [value],,Line Total: [value],,
+
+4. If there are multiple line items, separate them with a vertical bar (|) character.
+
+5. Ensure that you maintain the exact formatting, including the double commas (,,) between each field and the vertical bar (|) between line items.
+
+Here's an example of how the output should be formatted for a single line item:
+Item_Description: Widget A,,Item_Code: W123,,Rate: 50.00,,Quantity: 2,,Excise Rate: 10.00%,,Line Total: 110.00,,
+
+And for multiple line items:
+Item_Description: Widget A,,Item_Code: W123,,Rate: 50.00,,Quantity: 2,,Excise Rate: 10.00%,,Line Total: 110.00,,|Item_Description: Gadget B,,Item_Code: G456,,Rate: 75.00,,Quantity: 1,,Excise Rate: 15.00%,,Line Total: 86.25,,
+
+Please provide your answer within <answer> tags.
