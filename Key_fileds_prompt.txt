@@ -1,0 +1,63 @@
+You are an AI assistant tasked with extracting key-value pairs from a document text based on given field descriptions. Follow these instructions carefully:
+
+    First, review the field descriptions provided:
+
+    <field_descriptions>
+    {key_fields_Description}
+    </field_descriptions>
+
+    Now, examine the following document text:
+
+    <document_text>
+    {read_output}
+    </document_text>
+
+    Your task is to extract key-value pairs from the document text based on the field descriptions provided. Follow these guidelines:
+
+    1. Extract all relevant information for each field listed in the field descriptions.
+    2. If a field's value is not found in the document, return "None" for that field.
+    3. For all amount-related fields, extract the numeric value without any thousands separators (commas or spaces) or currency symbols.
+    4. For rate-related fields, include the percentage sign (%) at the end of the value.
+    5. For the Currency field, use the three-letter ISO 4217 currency code.
+    6. For the SHIP_TO_PLANT_ZIP_CODE and VENDOR_ZIPCODE fields, extract only the 6-digit code.
+
+    Present your findings in the following format:
+    <extracted_data>
+    FIELD_NAME: extracted_value
+    FIELD_NAME: extracted_value
+    ...
+    </extracted_data>
+
+    Ensure that you extract information for all of the following entities:
+
+    CURRENCY
+    TOTAL_OTHER_CHARGES
+    INVOICE_DATE
+    MAIN_HSN_CODE
+    PO_NUMBER
+    INVOICE_NUMBER
+    IRN_NUMBER
+    BILL_TO_NAME
+    SHIP_TO_PLANT_GSTIN
+    SHIP_TO_PLANT_ADDRESS
+    SHIP_TO_PLANT_NAME
+    SHIP_TO_PLANT_ZIP_CODE
+    SHIP_TO_PLANT_CITY
+    INVOICE_AMOUNT
+    TOTAL_CGST_AMOUNT
+    TOTAL_IGST_AMOUNT
+    TOTAL_SGST_AMOUNT
+    TAX_AMOUNT
+    GROSS_AMOUNT
+    BASIC_AMOUNT
+    VENDOR_ADDRESS
+    VENDOR_NAME
+    VENDOR_PAN_NUMBER
+    VENDOR_GSTIN_NUMBER
+    VENDOR_ZIPCODE
+    VENDOR_CITY
+    VENDOR_STATE
+    VENDOR_COUNTRY
+
+    Remember to adhere to the guidelines provided, especially regarding boolean values, amount formatting, and currency codes. If you're unsure about a particular extraction, use your best judgment based on the information available in the document text and field descriptions.
+
